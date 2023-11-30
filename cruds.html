@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= ", initial-scale=1.0">
+    <link rel="stylesheet" href="curds.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cruds">
+        <div class="head">
+            <h1>CRUDS</h1>
+            <p>Prouducts Systeme Manager</p>
+        </div>
+        <div class="input">
+           <input type="text" placeholder="title" id="title">
+           <div class="price">
+            <input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+            <input onkeyup="gettotal()" type="number" placeholder="taxes" id="taxes">
+            <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+            <input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+            <small id="total"></small>
+           </div>
+           <input type="number" placeholder="count" id="count">
+           <input type="text" placeholder="category" id="category">
+           <button id="submit">Create</button>
+        </div>
+
+        <div class="output">
+            <div id="searchB">
+                <input type="text" onkeyup="searchData(this.value)" placeholder="Search" id="Search">
+                <div id="searchbtn">
+                <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="deletall"></div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>category</th>
+                    <th>UPdate</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="curds.js"></script>
+</body>
+</html>
